@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n, i, j, m;
+    char ch;
+    int f;
+    while (cin>>ch>>n) {
+        for (i = 1; i <= n; i++) {
+            for (j = 1; j <= n - i; j++) {
+                cout << ' ';
+            }for (m = 1; m <= 2 * i - 1; m++) {
+                cout << ch;
+            }
+            cout << endl;
+        }
+        n = n - 1;
+        for (i = n; i >= 1; i--) {
+            for (j = n - i; j >= 0; j--) {
+                cout << ' ';
+            }for (m = 1; m <= 2 * i - 1; m++) {
+                cout << ch;
+            }
+            cout << endl;
+        }
+
+}    
+    return 0;
+}
